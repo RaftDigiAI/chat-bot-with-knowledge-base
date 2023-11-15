@@ -1,4 +1,4 @@
-# Bot POC
+# A Retail Chatbot for perfume suggestions
 
 # Running bot
 1. Create virtual environment
