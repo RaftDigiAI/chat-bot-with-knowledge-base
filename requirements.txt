@@ -5,3 +5,4 @@ streamlit-chat
 python-dotenv
 faiss-cpu
 tiktoken
+pandas
