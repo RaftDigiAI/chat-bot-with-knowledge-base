@@ -1,8 +1,8 @@
 from langchain.agents import AgentExecutor, AgentType, Tool, initialize_agent
 from langchain.chat_models import ChatOpenAI
-from langchain.schema import SystemMessage
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts.chat import MessagesPlaceholder
+from langchain.schema import SystemMessage
 
 from src.config.config import OPEN_AI_LLM_MODEL, OPENAI_API_KEY
 from src.tools.perfume_search_tool import PERFUME_TOOL_DESCRIPTION, PerfumeSearchTool

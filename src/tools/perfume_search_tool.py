@@ -1,8 +1,7 @@
-from langchain.vectorstores import FAISS
-
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
 from pydantic import BaseModel
 
 from src.config.config import OPEN_AI_LLM_MODEL, OPENAI_API_KEY, VECTOR_STORE_FILE_PATH

@@ -1,8 +1,8 @@
+import openai
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage
-import openai
-from src.config.config import OPENAI_API_KEY, OPEN_AI_LLM_MODEL
 
+from src.config.config import OPEN_AI_LLM_MODEL, OPENAI_API_KEY
 
 openai.api_key = OPENAI_API_KEY
 

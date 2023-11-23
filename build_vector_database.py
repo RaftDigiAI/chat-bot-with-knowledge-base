@@ -1,11 +1,11 @@
 from typing import List
+
 from langchain.docstore.document import Document
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
+from pandas import read_excel
 
 from src.config.config import OPENAI_API_KEY, VECTOR_STORE_FILE_PATH
-
-from pandas import read_excel
 
 documents: List[Document] = []
 file_content = read_excel("./data.xlsx")
