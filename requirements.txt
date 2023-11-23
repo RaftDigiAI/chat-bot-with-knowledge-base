@@ -1,8 +1,11 @@
+faiss-cpu
 langchain
+lark
 openai
+openpyxl
+pandas
+python-dotenv
 streamlit
 streamlit-chat
-python-dotenv
-faiss-cpu
 tiktoken
-pandas
+weaviate-client
