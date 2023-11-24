@@ -1,11 +1,14 @@
 from langchain.agents import AgentExecutor, AgentType, Tool, initialize_agent
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
+from langchain.memory.chat_message_histories import StreamlitChatMessageHistory
 from langchain.prompts.chat import MessagesPlaceholder
 from langchain.schema import SystemMessage
 
 from src.config.config import OPEN_AI_LLM_MODEL, OPENAI_API_KEY
 from src.tools.perfume_search_tool import PERFUME_TOOL_DESCRIPTION, PerfumeSearchTool
+
+msgs = StreamlitChatMessageHistory(key="chat-app")
 
 
 def setup_agents() -> AgentExecutor:
@@ -63,6 +66,8 @@ def setup_memory_and_prompt(
         "extra_prompt_messages": [MessagesPlaceholder(variable_name="memory")],
         "system_message": system_message,
     }
-    memory = ConversationBufferMemory(memory_key="memory", return_messages=True)
+    memory = ConversationBufferMemory(
+        memory_key="memory", return_messages=True, chat_memory=msgs
+    )
 
     return agent_kwargs, memory
