@@ -1,5 +1,12 @@
 # A Retail Chatbot for perfume suggestions
 
+# Technologies
+- Python
+- Streamlit - for the UI
+- Weaviate - for the knowledge vector search
+- OpenAI - for the language model
+- Langchain - for building AI pipeline
+
 # Running bot
 1. Create virtual environment
 2. Copy .env.template to .env and fill in the values OPEN_AI_LLM_MODEL and OPENAI_API_KEY
